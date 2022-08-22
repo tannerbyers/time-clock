@@ -1,0 +1,25 @@
+CREATE TABLE Users (
+    Id int NOT NULL,
+    LastName varchar(255),
+    FirstName varchar(255),
+    OrgId int,
+    UserType varchar(255),
+    CurrentTimeSlotStatus varchar(255),
+    PRIMARY KEY (Id)
+);
+
+CREATE TABLE Organizations (
+    Id int NOT NULL AUTO_INCREMENT,
+    OrgName varchar(255),
+    UserId int,
+    PRIMARY KEY (Id)
+);
+
+CREATE TABLE TimeSlots (
+    Id int NOT NULL AUTO_INCREMENT,
+    UserId varchar(255),
+    -- Probably want Time to be a date object in the future
+    Time varchar(255),
+    TimeType varchar(255),
+    PRIMARY KEY (Id)
+);
